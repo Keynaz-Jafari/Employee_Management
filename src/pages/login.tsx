@@ -1,11 +1,11 @@
-import React from 'react'
+
+import LoginHolder from "../components/login"
 
 const Login = () => {
   return (
-    <div>
-      <h1>Login</h1>
-    </div>
+
+    <LoginHolder/>
+
   )
 }
-
 export default Login
