@@ -1,5 +1,5 @@
 
-import LoginHolder from "../components/login"
+import LoginHolder from "../../components/login"
 
 const Login = () => {
   return (
