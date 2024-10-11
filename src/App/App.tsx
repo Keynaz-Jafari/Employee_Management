@@ -1,4 +1,5 @@
 import { createBrowserRouter,RouterProvider } from "react-router-dom"
+import UserProvider from '../context/userContext'
  
 import Login from "../pages/login/login"
 import Dashboard from '../pages/dashboard/dashboard'
@@ -14,6 +15,12 @@ export default function App() {
     element:<Dashboard/>
   }])
   return (
-<RouterProvider router={router}/>
+    <>
+    <UserProvider>
+    <RouterProvider router={router}/>
+    </UserProvider>
+    </>
+
+
   )
 }
