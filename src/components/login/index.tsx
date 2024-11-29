@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import users from '../../constants/users.json'
-import { setItem } from "../../core/storage/storage"
+import { setItem } from '../core/storage/storage'
 import { useNavigate } from "react-router-dom"
 import LoginForm from './loginForm/loginForm'
 import Alert from '../alert/alert'

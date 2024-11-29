@@ -1,7 +1,7 @@
 import React, { useState,useContext,useEffect,createContext, Children } from "react";
 import userJson from '../constants/users.json'
-import { IUserInterface } from "../core/interfaces/IUserInterface";
-import { getItem} from "../core/storage/storage";
+import IUserInterface from "../components/core/interface/IUserInterface";
+import { getItem } from "../components/core/storage/storage";
 const UserContext = createContext<{
     users: IUserInterface[];
     setUsers: React.Dispatch<React.SetStateAction<IUserInterface[]>>;

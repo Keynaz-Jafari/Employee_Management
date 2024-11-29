@@ -1,26 +1,33 @@
-import { createBrowserRouter,RouterProvider } from "react-router-dom"
-import UserProvider from '../context/userContext'
- 
-import Login from "../pages/login/login"
-import Dashboard from '../pages/dashboard/dashboard'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
 
 
-export default function App() {
-  const router = createBrowserRouter([{
-    path:'/login',
-    element:<Login/>
-  },
-  {
-    path:'/dashboard',
-    element:<Dashboard/>
-  }])
+import Login from '../pages/login/login';
+import Dashboard from '../pages/dashboard/dashboard';
+import Users from '../pages/users/users';
+
+import { UserProvider } from '../context/userContext';
+
+function App() {
+
   return (
-    <>
     <UserProvider>
-    <RouterProvider router={router}/>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users" element={<Users />} />
+    
+
+        </Routes>
+      </Router>
+      {/* {token ? null : <Login />} */}
     </UserProvider>
-    </>
 
-
-  )
+  );
 }
+
+export default App;
